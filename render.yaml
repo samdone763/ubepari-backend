@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ubepari-backend
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        value: ubepari_jwt_secret_2024_secure
+      - key: ADMIN_USER
+        value: ubepari_pc
+      - key: ADMIN_PASS
+        value: Ubepari@2024!
+      - key: PORT
+        value: 3000
